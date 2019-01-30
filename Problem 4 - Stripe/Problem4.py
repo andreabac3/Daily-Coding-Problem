@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 
 def solve(arraylist):
     min = 10
@@ -16,9 +16,9 @@ def solve(arraylist):
     elif min2 - min > 1:
         return min + 1
 
+if __name__ == "__main__":
+    list1 = [3, 4, -1, 1]
+    list2 = [1, 2, 0]
 
-list1 = [3, 4, -1, 1]
-list2 = [1, 2, 0]
-
-print(solve(list1))
-print(solve(list2))
+    print(solve(list1))
+    print(solve(list2))
