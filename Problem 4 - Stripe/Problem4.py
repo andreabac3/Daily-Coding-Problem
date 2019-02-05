@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 def solve(arraylist):
-    min1 = 10
-    min2 = 10
+    min1 = float("inf")
+    min2 = float("inf")
     for elem in arraylist:
         if elem <= 0:
             continue
