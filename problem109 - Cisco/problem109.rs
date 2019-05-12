@@ -12,8 +12,8 @@ fn main() {
 
 fn solve(input_string: &mut String ) {
     let mut i:usize = 0;
-    let lenght:usize = input_string.len() - 1;
-    while i < (lenght) {
+    let length:usize = input_string.len() - 1;
+    while i < (length) {
         if input_string.chars().nth(i).unwrap() == '1' && input_string.chars().nth(i+1).unwrap() == '0'{
             input_string.replace_range(i..i+2, "01");
         }
