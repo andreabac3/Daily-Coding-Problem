@@ -7,22 +7,22 @@ fn main() {
 
 }
 
-fn solve(mut binary_vector:String ) -> String {
+fn solve(mut input_string:String ) -> String {
     let mut skip:bool = false;
     let mut i:usize = 0;
-    let lenght:usize = binary_vector.len();
+    let lenght:usize = input_string.len();
     while i < (lenght - 1) {
         if skip {
             skip = false;
             i = i + 1;
             continue;
         }
-        if binary_vector.chars().nth(i).unwrap() == '1' && binary_vector.chars().nth(i+1).unwrap() == '0'{
-            binary_vector.replace_range(i..i+2, "01");
+        if input_string.chars().nth(i).unwrap() == '1' && input_string.chars().nth(i+1).unwrap() == '0'{
+            input_string.replace_range(i..i+2, "01");
             skip = true;
         }
         i = i + 1;
     }
-    return binary_vector;
+    return input_string;
 }
 
