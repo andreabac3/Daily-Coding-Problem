@@ -1,14 +1,17 @@
-use std::convert::TryInto;
+
 fn main() {
-    println!("{}",solve("11100010".to_string()))
+    println!("{}",solve("11100010".to_string()));
     // assertResult = '11010001'
+    println!("{}",solve("10101010".to_string()));
+    // assertResult = '01010101'
+
 }
 
 fn solve(mut binary_vector:String ) -> String {
     let mut skip:bool = false;
     let mut i:usize = 0;
     let lenght:usize = binary_vector.len();
-    while i < (lenght - 1).try_into().unwrap() {
+    while i < (lenght - 1) {
         if skip {
             skip = false;
             i = i + 1;
@@ -22,3 +25,4 @@ fn solve(mut binary_vector:String ) -> String {
     }
     return binary_vector;
 }
+
