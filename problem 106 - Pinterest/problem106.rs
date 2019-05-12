@@ -7,10 +7,10 @@ fn main(){
 }
 
 fn solve(array: &[i32; 4]) -> bool {
-    let lenght:usize = array.len() - 1;
+    let length:usize = array.len() - 1;
     if array[0] == 0 {return false;}
     let mut i:usize = (1 + array[0] - 1) as usize;
-    while i < lenght {
+    while i < length {
         if array[i] == 0 {return false;}
         i = (array[i] + i as i32) as usize;
     }
